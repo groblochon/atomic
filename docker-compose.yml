@@ -1,6 +1,8 @@
 services:
   server:
-    image: ghcr.io/kenforthewin/atomic-server:latest
+    build:
+      context: .
+      dockerfile: server.dockerfile
     environment:
       - PUBLIC_URL=${PUBLIC_URL:-}
       - ATOMIC_SETUP_TOKEN=${ATOMIC_SETUP_TOKEN:-}
@@ -14,7 +16,9 @@ services:
     restart: unless-stopped
 
   web:
-    image: ghcr.io/kenforthewin/atomic-web:latest
+    build:
+      context: .
+      dockerfile: web.dockerfile
     restart: unless-stopped
 
   proxy:
