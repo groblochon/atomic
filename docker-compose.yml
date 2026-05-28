@@ -65,6 +65,7 @@ services:
       interval: 2s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
 volumes:
   atomic-data:
