@@ -23,6 +23,7 @@ bench/reports/
 docker-compose.prod.yml
 fly.toml
 exports/
+.env
 
 # Discord bot
 plugins/discord/data/
